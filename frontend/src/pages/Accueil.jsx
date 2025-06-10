@@ -3,6 +3,7 @@ import React from "react";
 import HeroSlider from "@components/HeroSlider";
 import labImage from "@assets/images/labthumbnail.webp";
 import boutiqueImage from "@assets/images/Boutiquethumb.webp";
+import { Link } from "react-router-dom";
 import "../styles/layout.scss";
 
 const Accueil = () => {
@@ -23,7 +24,7 @@ const Accueil = () => {
               Formulez vos propres savons avec notre calculateur de recette.
               Une approche artisanale, pédagogique et ouverte à tous les curieux de cosmétique naturelle.
             </p>
-            <a href="/lab" className="cta-button">Explorer le Lab</a>
+            <Link to="/lab" className="cta-button">Explorer le Lab</Link>
           </div>
           <div className="image">
             <img src={labImage} alt="Illustration laboratoire Dermès" />
@@ -39,7 +40,7 @@ const Accueil = () => {
           <div className="text">
             <h2>La Boutique</h2>
             <p>Découvrez nos créations uniques, élaborées à la main en séries limitées dans notre atelier provençal.</p>
-            <a href="/boutique" className="cta-button">Voir les produits</a>
+            <Link to="/boutique" className="cta-button">Voir les produits</Link>
           </div>
         </div>
       </section>
