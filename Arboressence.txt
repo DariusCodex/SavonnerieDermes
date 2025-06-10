@@ -1,0 +1,75 @@
+projet-savonnerie/
+│
+├── backend/
+│   ├── app/
+│   │   ├── main.py
+│   │   ├── dependencies.py
+│   │   ├── exception_handlers/
+│   │   │   └── handlers.py
+│   │   ├── api/
+│   │   │   └── v1/
+│   │   │       ├── calculs.py
+│   │   │       └── ingredients.py
+│   │   ├── core/
+│   │   │   ├── config.py
+│   │   │   └── security.py
+│   │   ├── db/
+│   │   │   ├── session.py
+│   │   │   └── models/
+│   │   │       ├── base.py
+│   │   │       ├── huile.py
+│   │   │       └── recette.py
+│   │   ├── schemas/
+│   │   │   ├── huile.py
+│   │   │   └── recette.py
+│   │   ├── services/
+│   │   │   ├── formulation.py
+│   │   │   └── conversions.py
+│   │   └── tests/
+│   │       ├── test_calculs.py
+│   │       └── test_ingredients.py
+│   ├── migrations/
+│   │   └── versions/
+│   └── Dockerfile
+│
+├── frontend/
+│   ├── public/
+│   │   ├── favicon.ico
+│   │   └── logo.svg
+│   │
+│   ├── src/
+│   │   ├── assets/
+│   │   │   ├── images/
+│   │   │   │   └── fond-boutique.webp       # Ton fond d’écran ici
+│   │   │   ├── icons/                       # Pictogrammes SVG, logos secondaires
+│   │   │   └── fonts/                       # Polices éventuelles
+│   │   │
+│   │   ├── components/
+│   │   │   ├── Header.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   └── CarteFormulation.jsx
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── Accueil.jsx
+│   │   │   ├── Boutique.jsx
+│   │   │   └── Lab.jsx
+│   │   │
+│   │   ├── styles/
+│   │   │   ├── _variables.scss
+│   │   │   ├── _mixins.scss
+│   │   │   ├── layout.scss                  # Contient ton fond et ta structure
+│   │   │   └── cartes.scss
+│   │   │
+│   │   ├── App.js                           # Gère ton layout global
+│   │   └── index.js                         # Point d’entrée Vite/React
+│   │
+│   └── vite.config.js
+│
+├── .env
+├── .env.development
+├── .env.staging
+├── .env.production
+├── docker-compose.yml
+├── README.md
+├── requirements.txt
+└── Plan_Architecture_Projet_Web.docx

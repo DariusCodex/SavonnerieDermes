@@ -1,0 +1,321 @@
+body {
+  margin: 0;
+  font-family: $font-principale;
+  color: $texte-principal;
+  background-image: url('../assets/images/fond-boutique.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  @include container;
+}
+
+.site-header {
+  background-color: $fond-transparent;
+  padding: $padding-standard 0;
+  text-align: center;
+}
+
+.logo {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: $texte-principal;
+  font-weight: bold;
+}
+
+.site-footer {
+  background-color: $fond-transparent;
+  text-align: center;
+  padding: $padding-standard 0;
+  margin-top: 2rem;
+}
+
+.hero-section {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 8px;
+  margin: 2rem auto;
+}
+
+.hero-content {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.cta-button {
+  background-color: $couleur-primaire;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s;
+
+  &:hover {
+    background-color: darken($couleur-primaire, 10%);
+  }
+}
+
+.presentation,
+.lab-preview,
+.boutique-preview {
+  text-align: center;
+  margin: 4rem auto;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
+
+.apropos-link {
+  text-align: center;
+
+  a {
+    color: $texte-principal;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 1rem;
+  }
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+
+  .carousel-produit {
+    text-align: center;
+
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: $texte-principal;
+    }
+  }
+
+  .carousel-controles {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    button {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: $texte-principal;
+
+      &:hover {
+        color: darken($texte-principal, 20%);
+      }
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background-color: #ccc;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &.actif {
+        background-color: $couleur-primaire;
+      }
+    }
+  }
+}
+.hero-slider {
+  position: relative;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .slider-overlay {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 1rem;
+
+    h1 {
+      font-family: $font-principale;
+      font-size: 2.5rem;
+      color: $texte-principal;
+      font-weight: normal;
+      line-height: 1.4;
+    }
+  }
+
+  .slider-dots {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.6rem;
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &.active {
+        background-color: $couleur-primaire;
+      }
+    }
+  }
+}
+.split-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: $max-width;
+  margin: 1rem auto;
+  padding: 0 $padding-standard;
+
+  .text {
+    flex: 1;
+    text-align: left;
+  }
+
+  .image {
+    flex: 1;
+    text-align: right;
+
+    img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+  }
+
+  @include responsive(mobile) {
+    flex-direction: column;
+
+    .text,
+    .image {
+      text-align: center;
+    }
+  }
+}
+.carte-section {
+  background-color: rgba(248, 221, 170, 0.774); // crème douce semi-transparente
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  margin: 2rem auto;
+  max-width: $max-width;
+
+  .split-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .text {
+      flex: 1;
+      text-align: left;
+    }
+
+    .image {
+      flex: 1;
+      text-align: right;
+
+      img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 8px;
+        box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+      }
+    }
+
+    @include responsive(mobile) {
+      flex-direction: column;
+
+      .text,
+      .image {
+        text-align: center;
+      }
+    }
+  }
+}
+.carte-section.inverse {
+  .split-section {
+
+    .image {
+      text-align: left;
+    }
+
+    .text {
+      text-align: right;
+    }
+
+    @include responsive(mobile) {
+      flex-direction: column;
+
+      .text,
+      .image {
+        text-align: center !important;
+      }
+    }
+  }
+}
