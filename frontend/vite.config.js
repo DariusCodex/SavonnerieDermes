@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-  base: "/SavonnerieDermes/", // Nom exact du dépôt GitHub
+  base: "/SavonnerieDermes/",
   plugins: [react()],
   resolve: {
     alias: {
