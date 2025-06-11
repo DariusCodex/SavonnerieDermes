@@ -1,0 +1,11 @@
+npm run dev
+
+npm run build
+
+npm run preview
+
+git add .
+git commit -m "Mise à jour du frontend et build dist"
+git push
+
+npm run deploy

@@ -40,14 +40,28 @@ projet-savonnerie/
 │   ├── src/
 │   │   ├── assets/
 │   │   │   ├── images/
+│   │   │   │   ├── Boutiquethumb.webp
+│   │   │   │   ├── labthumbnail.webp
+│   │   │   │   ├── savon1.webp
+│   │   │   │   ├── savon2.webp
+│   │   │   │   ├── savon3.webp
 │   │   │   │   └── fond-boutique.webp       # Ton fond d’écran ici
 │   │   │   ├── icons/                       # Pictogrammes SVG, logos secondaires
 │   │   │   └── fonts/                       # Polices éventuelles
 │   │   │
 │   │   ├── components/
+│   │   │   ├── lab/
+│   │   │   │   ├── RecetteInfos.jsx
+│   │   │   │   ├── FormulationParams.jsx
+│   │   │   │   ├── IngredientsSelector.jsx
+│   │   │   │   ├── AnalyseTechnique.jsx
+│   │   │   │   ├── SimulationResultats.jsx
+│   │   │   │   └── SuiviArchivage.jsx
 │   │   │   ├── Header.jsx
 │   │   │   ├── Footer.jsx
-│   │   │   └── CarteFormulation.jsx
+│   │   │   ├── CarteFormulation.jsx
+│   │   │   ├── HeroSlider.jsx
+│   │   │   └── SectionLabBoutique.jsx
 │   │   │
 │   │   ├── pages/
 │   │   │   ├── Accueil.jsx
@@ -72,4 +86,7 @@ projet-savonnerie/
 ├── docker-compose.yml
 ├── README.md
 ├── requirements.txt
+├── package-lock.json
+├── package.json
+├── gitcommand.txt
 └── Plan_Architecture_Projet_Web.docx

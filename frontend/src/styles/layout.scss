@@ -114,67 +114,7 @@ body {
   }
 }
 
-.carousel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2rem auto;
 
-  .carousel-produit {
-    text-align: center;
-
-    img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-    }
-
-    h3 {
-      margin: 0.5rem 0;
-      font-size: 1.2rem;
-    }
-
-    p {
-      font-size: 1rem;
-      color: $texte-principal;
-    }
-  }
-
-  .carousel-controles {
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-
-    button {
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: $texte-principal;
-
-      &:hover {
-        color: darken($texte-principal, 20%);
-      }
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      background-color: #ccc;
-      border-radius: 50%;
-      display: inline-block;
-      cursor: pointer;
-      transition: background 0.3s;
-
-      &.actif {
-        background-color: $couleur-primaire;
-      }
-    }
-  }
-}
 .hero-slider {
   position: relative;
   height: 80vh;
@@ -315,6 +255,42 @@ body {
       .text,
       .image {
         text-align: center !important;
+      }
+    }
+  }
+}
+.carte-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.carte-large {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+  h3.titre-carte {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      background: #f9f9f9;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.5rem;
+      border-radius: 0.5rem;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #eef;
       }
     }
   }
